@@ -20,6 +20,6 @@ public class Serie_Fibonacci {
             System.out.print(num3 + "  ");
             num1=num2;
             num2=num3;
-        }//fin para
+        }//fin para++
     }  
 }
