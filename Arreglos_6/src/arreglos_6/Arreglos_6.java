@@ -1,6 +1,8 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+En una emisora se entrega una boleta a cada oyente que llame,
+pero no se le entrega dos veces, crear un programa que permita ingresar
+la cédula del oyente y el programa diga inmediatamente si se le otorga 
+la boleta o no
  */
 package arreglos_6;
 
@@ -10,22 +12,22 @@ public class Arreglos_6 {
 
     public static void main(String[] args) {
         Scanner read = new Scanner(System.in);
-        int pos = -1, num = 0, sw, j;
+        int pos = -1, num, sw, j;
         String resp;
         System.out.print("Desea ingresar un participante ");
         resp = read.next();
         int[] vector = new int[100];
         while (!"no".equals(resp)) {
             System.out.print("Ingrese un numero de cedula ");
-            read.nextInt();
+            num=read.nextInt();
             j = 0;
             sw = 0;
 
-            while (j <= pos && sw == 0) {
+             while (j <= pos && sw == 0) {
                 if (vector[j] == num) {
                     sw = 1;
                 } else {
-                    j++;
+                    j++;     
                 }
 
             }
